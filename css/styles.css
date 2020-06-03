@@ -74,6 +74,7 @@ p {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
+  cursor: pointer;
 }
 
 .site-nav .current {
@@ -101,10 +102,17 @@ p {
   padding: 0;
   border: none;
   color: black;
+  cursor: pointer;
 }
 
-.auth-icon:hover {
+.auth-icon:hover,
+.auth-icon:focus {
   color: var(--accent-colour);
+  fill: var(--accent-colour);
+}
+
+.auth-icon:hover svg,
+.auth-icon:focus {
   fill: var(--accent-colour);
 }
 
@@ -181,6 +189,7 @@ p {
   text-align: center;
   justify-content: center;
   align-self: center;
+  cursor: pointer;
 }
 /* Features */
 .features {
@@ -253,12 +262,16 @@ p {
   margin-bottom: 30px;
 }
 .team .name {
+  background-color: var(--primary-white-colour);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
   color: var(--primary-text-colour);
   font-weight: 500;
   font-size: 16px;
   line-height: 1.36;
   text-align: center;
   margin-right: 30px;
+  padding-bottom: 24px;
 }
 .team .name:last-child {
   margin-right: 0;
@@ -285,6 +298,7 @@ p {
   height: 44px;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .network-button .icon {
   justify-content: center;
@@ -294,17 +308,18 @@ p {
   fill: var(--icon-colour);
 }
 
-.network-button:hover,
-.network-button:focus {
+.network-button:hover {
   background-color: var(--accent-colour);
   border-radius: 50%;
+  color: var(--primary-white-colour);
 }
-.network-button .icon:hover,
-.network-button .icon:focus {
+
+.network-button:hover svg {
   fill: var(--primary-white-colour);
 }
 
-/* Clients */
+/*Clients*/
+
 .clients {
   display: flex;
 }
@@ -321,14 +336,17 @@ p {
   border: 1px solid var(--icon-colour);
   box-sizing: border-box;
   border-radius: 4px;
+  cursor: pointer;
 }
 .company-box:hover {
   border: 1px solid var(--accent-colour);
+  color: var(--accent-colour);
+}
+.company-box:hover svg {
+  fill: var(--accent-colour);
 }
 
 .company-box .icon {
-  /* width: 45px;
-  height: 50px; */
   fill: var(--icon-colour);
 }
 .company-box .icon:hover {
@@ -347,8 +365,9 @@ footer {
   padding-bottom: 21px;
 }
 .address-list {
-  margin-right: auto;
+  margin-right: 69px;
 }
+
 .address {
   color: var(--primary-white-colour);
   font-style: normal;
@@ -379,9 +398,12 @@ footer {
 .footer-network .icon {
   fill: var(--primary-white-colour);
 }
+.network-list {
+  margin-right: 94px;
+}
 
 .subscribe-form {
-  margin-left: 100px;
+  /* margin-left: 100px; */
   margin-bottom: 68px;
 }
 .subscribe-button {
@@ -418,7 +440,14 @@ footer {
   font-size: 16px;
   line-height: 1.62;
   height: 38px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.12), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 3px 1px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  border: none;
+  padding-left: 22px;
+  padding-right: 22px;
 }
+
 .filter .item {
   margin-right: 8px;
 }
@@ -431,6 +460,7 @@ footer {
 .filter .title:focus {
   color: var(--primary-white-colour);
   background-color: var(--accent-colour);
+  border: none;
 }
 /* Projects */
 .project-list {
